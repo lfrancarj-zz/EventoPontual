@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
@@ -49,7 +49,7 @@ group :development, :test do
   # For Heroku deploy
   gem 'rails_12factor', group: :production
 
-  gem 'devise'
+
   #Ruby Version - Required for Heroku
   ruby '2.1.5'
 end
