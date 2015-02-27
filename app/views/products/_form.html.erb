@@ -1,3 +1,4 @@
+
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
@@ -10,20 +11,28 @@
       </ul>
     </div>
   <% end %>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Produto</div>
+  <div class="panel-body">
+      <div class="field">
+         <input type="email" class="form-control" id="email" placeholder="Enter email">
+        <%= f.label :Codigo %><br>
+        <%= f.text_field :code %>
+      </div>
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :price %><br>
+        <%= f.text_field :price %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :code %><br>
-    <%= f.text_field :code %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
+
 <% end %>
